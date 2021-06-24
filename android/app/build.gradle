@@ -40,6 +40,21 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+    flavorDimensions "app"
+    productFlavors {
+        dev {
+            dimension "app"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Ninja_1"
+            //versionNameSuffix ".dev"
+        }
+        prod {
+            dimension "app"
+            applicationIdSuffix ".prod"
+            resValue "string", "app_name", "Ninja_2"
+           // versionNameSuffix ".prod"
+        }
+    }
 
     buildTypes {
         release {
